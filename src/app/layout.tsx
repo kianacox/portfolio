@@ -4,6 +4,11 @@ import { Orbitron } from 'next/font/google';
 import { VT323 } from 'next/font/google';
 
 import './globals.css';
+import Head from 'next/head';
+
+<Head>
+  <link rel="icon" href="/favicon.ico" />
+</Head>;
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
