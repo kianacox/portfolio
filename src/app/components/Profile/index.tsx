@@ -22,9 +22,9 @@ const Profile: React.FC = () => {
         <h2 className={styles.about}>Summary</h2>
         <p className={styles.summary}>
           Front-End Engineer, Level 4. Specialises in React/Redux builds, critical hits in unit
-          testing, and stealth refactors during code freeze. Former Sky Casino alchemist, now spec'd
-          into cross-brand code wizardry. Buffs entire squad with clean UI components and test
-          coverage auras. Weak to flaky tests, resistant to Jira chaos.
+          testing, and stealth refactors during code freeze. Former Sky Casino alchemist, now
+          spec&rsquo;d into cross-brand code wizardry. Buffs entire squad with clean UI components
+          and test coverage auras. Weak to flaky tests, resistant to Jira chaos.
         </p>
         <div className={styles.skillsContainer}>
           <h2 className={styles.strengths}>Strengths</h2>
@@ -75,7 +75,7 @@ const Profile: React.FC = () => {
             <li className={styles.weaknessItem}>
               <p className={styles.weaknessText}>
                 <strong className={styles.weaknessBold}>Refactor Temptation</strong>: Sees legacy
-                code and hears the siren song of "I could just clean this up a bit..."
+                code and hears the siren song of &quot;I could just clean this up a bit...&quot;
               </p>
             </li>
             <li className={styles.weaknessItem}>
