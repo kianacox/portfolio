@@ -1,0 +1,47 @@
+.profilePicture {
+  border-radius: 6px;
+}
+
+.name {
+  color: #e0e0e0;
+  font-size: 70;
+}
+
+.titles,
+.about,
+.strengths,
+.weaknesses {
+  color: #00ff96;
+  font-size: 35;
+  padding: 10px 0 10px 0;
+}
+
+.profileCardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 25;
+}
+
+.summary,
+.strengthsText,
+.weaknessText {
+  color: #e0e0e0;
+}
+
+.strengthBold {
+  color: #ffd700;
+}
+
+.weaknessBold {
+  color: #ff41a1;
+}
+
+.strengthsItem,
+.weaknessItem {
+  padding: 5px 0 5px 0;
+}
+
+.avatarContainer {
+  padding: 35px 0 0 15px;
+}

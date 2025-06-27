@@ -1,0 +1,56 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contentCard {
+  display: flex;
+  width: 80vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  border: 1px solid;
+  border-color: #00ff96;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+  background: #0d0d0d;
+  flex-direction: row;
+}
+
+.tabs {
+  background-color: #0d0d0d;
+  border: 1px solid #00ff96;
+  color: #e0e0e0;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 0 2px 0 0;
+  border-bottom: 0px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+  font-family: var(--font-vt323);
+  font-size: 30;
+}
+
+.tabs:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+.tabsContainer {
+  display: flex;
+  margin: 12px;
+  gap: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .contentCard {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .tabs {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,43 @@
+.inventoryContainer {
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+  width: inherit;
+}
+
+.masteryItems {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+}
+
+.inventoryRow {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+}
+
+.inventoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #00ff96;
+  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+  padding: 10px;
+  text-align: center;
+  height: 75px;
+}
+
+.inventoryItem:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+.inventoryTitle {
+  padding: 0 0 0 12px;
+}
