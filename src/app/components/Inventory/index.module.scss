@@ -1,7 +1,6 @@
 .inventoryContainer {
   display: flex;
   flex-direction: column;
-  //   align-items: center;
   width: inherit;
 }
 
@@ -40,4 +39,10 @@
 
 .inventoryTitle {
   padding: 0 0 0 12px;
+}
+
+@media (max-width: 768px) {
+  .inventoryRow {
+    padding: 10px 20px 10px 10px;
+  }
 }
