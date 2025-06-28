@@ -4,7 +4,6 @@ import styles from './index.module.scss';
 import Profile from '../Profile';
 import Inventory from '../Inventory';
 import Employment from '../Employment';
-import Education from '../Education';
 import { useState } from 'react';
 
 const Content: React.FC = () => {
@@ -15,7 +14,6 @@ const Content: React.FC = () => {
     { key: 'profile', label: 'Profile' },
     { key: 'inventory', label: 'Inventory' },
     { key: 'employment', label: 'Employment History' },
-    { key: 'education', label: 'Education' },
   ];
   const renderContent = () => {
     switch (activeTab) {
@@ -23,15 +21,13 @@ const Content: React.FC = () => {
         return <Inventory />;
       case 'employment':
         return <Employment />;
-      case 'education':
-        return <Education />;
       default:
         return <Profile />;
     }
   };
 
   return (
-    <main className={styles.content}>
+    <main className={styles.content} data-testid="content">
       <div className={styles.tabsContainer}>
         {tabArray.map(({ key, label }) => (
           <button key={key} onClick={() => setActiveTab(key as TabKey)} className={styles.tabs}>

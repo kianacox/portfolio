@@ -1,5 +1,5 @@
 const Employment: React.FC = () => {
-  return <p>Employment Placeholder - content coming soon!</p>;
+  return <section data-testid="employment">Employment Placeholder - content coming soon!</section>;
 };
 
 export default Employment;

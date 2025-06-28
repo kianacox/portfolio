@@ -17,7 +17,7 @@ import styles from './index.module.scss';
 const Inventory: React.FC = () => {
   const iconSize = 32;
   return (
-    <section className={styles.inventoryContainer}>
+    <section className={styles.inventoryContainer} data-testid="inventory">
       <h2 className={styles.inventoryTitle}>Mastery</h2>
       <div className={styles.inventoryRow}>
         <div className={styles.inventoryItem}>

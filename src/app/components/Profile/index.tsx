@@ -4,7 +4,7 @@ import Headline from '../Headline';
 
 const Profile: React.FC = () => {
   return (
-    <>
+    <section data-testid="profile">
       <div className={styles.avatarContainer}>
         <Image
           alt="a picture of me"
@@ -94,7 +94,7 @@ const Profile: React.FC = () => {
           </ul>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
