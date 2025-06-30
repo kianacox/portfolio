@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import styles from './index.module.scss';
 import Headline from '../Headline';
+import React from 'react';
 
-const Profile: React.FC = () => {
+const ProfileComponent: React.FC = () => {
   return (
     <section data-testid="profile">
       <div className={styles.avatarContainer}>
@@ -98,4 +99,5 @@ const Profile: React.FC = () => {
   );
 };
 
+const Profile = React.memo(ProfileComponent);
 export default Profile;

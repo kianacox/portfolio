@@ -1,5 +1,6 @@
 .profilePicture {
   border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
 }
 
 .name {
@@ -45,4 +46,13 @@
 
 .avatarContainer {
   padding: 35px 0 0 15px;
+}
+
+@media (max-width: 768px) {
+  .avatarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

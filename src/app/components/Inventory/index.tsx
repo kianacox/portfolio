@@ -11,10 +11,11 @@ import { FaDocker } from 'react-icons/fa';
 import { SiWebpack } from 'react-icons/si';
 import { SiVite } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
+import React from 'react';
 
 import styles from './index.module.scss';
 
-const Inventory: React.FC = () => {
+const InventoryComponent: React.FC = () => {
   const iconSize = 32;
   return (
     <section className={styles.inventoryContainer} data-testid="inventory">
@@ -92,4 +93,5 @@ const Inventory: React.FC = () => {
   );
 };
 
+const Inventory = React.memo(InventoryComponent);
 export default Inventory;
