@@ -55,6 +55,7 @@
 @media (max-width: 768px) {
   .timelineContainer {
     justify-content: flex-start; /* Align left */
+    height: 100vh;
   }
 
   .timelineLine {
