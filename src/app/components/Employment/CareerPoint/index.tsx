@@ -15,6 +15,7 @@ const CareerPoint: React.FC<CareerPointProps> = ({
   isLoaded = false,
   animationDelay = 0,
 }) => {
+  const featureOn = false;
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -29,7 +30,7 @@ const CareerPoint: React.FC<CareerPointProps> = ({
     >
       <div className={styles.circle} />
 
-      {hovered && (
+      {hovered && featureOn && (
         <>
           <SkillsList skills={skills} />
         </>
