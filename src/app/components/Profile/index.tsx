@@ -70,7 +70,7 @@ const ProfileComponent: React.FC = () => {
             <li className={styles.weaknessItem}>
               <p className={styles.weaknessText}>
                 <strong className={styles.weaknessBold}>Delicious Baked Treats</strong>: Morale
-                boost: +10. Focus debuff: also +10.
+                boost: +10. Gym debuff: -10.
               </p>
             </li>
             <li className={styles.weaknessItem}>

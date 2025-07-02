@@ -3,8 +3,8 @@
 import styles from './index.module.scss';
 import Profile from '../Profile';
 import Inventory from '../Inventory';
-import Employment from '../Employment';
 import { useState } from 'react';
+import Timeline from '../Employment/Timeline';
 
 const Content: React.FC = () => {
   type TabKey = 'profile' | 'inventory' | 'employment' | 'education';
@@ -20,7 +20,7 @@ const Content: React.FC = () => {
       case 'inventory':
         return <Inventory />;
       case 'employment':
-        return <Employment />;
+        return <Timeline />;
       default:
         return <Profile />;
     }
