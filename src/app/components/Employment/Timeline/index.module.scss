@@ -1,10 +1,10 @@
 .timelineContainer {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
 
 .timelineLine {
@@ -36,11 +36,6 @@
   letter-spacing: 0.05em;
 }
 
-.pointInfo {
-  width: 200px;
-  margin-left: 150px;
-}
-
 .pointInfoLoaded {
   opacity: 1;
   transform: translateX(0);
@@ -51,18 +46,20 @@
   width: 200px;
 }
 
+.careerPointContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .timelineContainer {
-    justify-content: flex-start; /* Align left */
+    justify-content: flex-start;
     height: 100vh;
   }
 
   .timelineLine {
-    left: 0; /* Move line to left edge */
-  }
-
-  .pointInfo {
-    margin-left: 0;
+    left: 0;
   }
 }

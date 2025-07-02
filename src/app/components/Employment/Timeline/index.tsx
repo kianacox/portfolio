@@ -48,7 +48,7 @@ const Timeline: React.FC = () => {
     <div className={styles.timelineContainer}>
       <div className={`${styles.timelineLine} ${isLoaded ? styles.timelineLineLoaded : ''}`} />
       {careerPoints.map((point, index) => (
-        <React.Fragment key={point.id}>
+        <div key={point.id} className={styles.careerPointContainer}>
           <CareerPoint {...point} isLoaded={isLoaded} animationDelay={index * 200} />
           <div
             className={`${styles.pointInfo} ${isLoaded ? styles.pointInfoLoaded : ''}`}
@@ -63,7 +63,7 @@ const Timeline: React.FC = () => {
               description={point.description}
             />
           </div>
-        </React.Fragment>
+        </div>
       ))}
     </div>
   );
