@@ -1,0 +1,27 @@
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsListItems {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.skillsListItem {
+  border: 1px solid #00ff96;
+  width: 120px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+  text-align: center;
+  font-size: 12px;
+}

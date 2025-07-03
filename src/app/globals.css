@@ -20,7 +20,8 @@ body {
 body {
   color: var(--textColour);
   background: var(--background);
-  font-family: var(--font-vt323);
+  font-family: var(--font-geist-mono);
+  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
