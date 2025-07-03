@@ -20,6 +20,7 @@ import { SiRedux } from 'react-icons/si';
 import { SiTestinglibrary } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 import { FaFigma } from 'react-icons/fa';
+import { COLORS } from '../../../constants/colors';
 
 const EmploymentTmeline: React.FC = () => {
   const iconSize = 32;
@@ -101,19 +102,22 @@ const EmploymentTmeline: React.FC = () => {
         <TimelineSeparator>
           <TimelineDot
             sx={{
-              border: '1px solid #00ff96',
-              boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)',
-              backgroundColor: '#E0E0E0',
+              border: `1px solid ${COLORS['primary-accent']}`,
+              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+              backgroundColor: COLORS.text,
             }}
           />
           <TimelineConnector
-            sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
+            sx={{
+              border: `1px solid ${COLORS['primary-accent']}`,
+              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+            }}
           />
         </TimelineSeparator>
         <TimelineContent
           sx={{
-            border: '1px solid #ffd700',
-            boxShadow: '0 0 10px rgba(233, 203, 11, 0.5)',
+            border: `1px solid ${COLORS.highlights}`,
+            boxShadow: `0 0 10px ${COLORS.highlights}80`,
             borderRadius: '8px',
             marginLeft: '10px',
             marginTop: '10px',
@@ -150,19 +154,22 @@ const EmploymentTmeline: React.FC = () => {
         <TimelineSeparator>
           <TimelineDot
             sx={{
-              border: '1px solid #00ff96',
-              boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)',
-              backgroundColor: '#E0E0E0',
+              border: `1px solid ${COLORS['primary-accent']}`,
+              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+              backgroundColor: COLORS.text,
             }}
           />
           <TimelineConnector
-            sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
+            sx={{
+              border: `1px solid ${COLORS['primary-accent']}`,
+              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+            }}
           />
         </TimelineSeparator>
         <TimelineContent
           sx={{
-            border: '1px solid #ffd700',
-            boxShadow: '0 0 10px rgba(233, 203, 11, 0.5)',
+            border: `1px solid ${COLORS.highlights}`,
+            boxShadow: `0 0 10px ${COLORS.highlights}80`,
             borderRadius: '8px',
             marginLeft: '10px',
             marginTop: '10px',
@@ -199,19 +206,22 @@ const EmploymentTmeline: React.FC = () => {
         <TimelineSeparator>
           <TimelineDot
             sx={{
-              border: '1px solid #00ff96',
-              boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)',
-              backgroundColor: '#E0E0E0',
+              border: `1px solid ${COLORS['primary-accent']}`,
+              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+              backgroundColor: COLORS.text,
             }}
           />
           <TimelineConnector
-            sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
+            sx={{
+              border: `1px solid ${COLORS['primary-accent']}`,
+              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+            }}
           />
         </TimelineSeparator>
         <TimelineContent
           sx={{
-            border: '1px solid #ffd700',
-            boxShadow: '0 0 10px rgba(233, 203, 11, 0.5)',
+            border: `1px solid ${COLORS.highlights}`,
+            boxShadow: `0 0 10px ${COLORS.highlights}80`,
             borderRadius: '8px',
             marginLeft: '10px',
             marginTop: '10px',

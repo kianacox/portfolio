@@ -1,7 +1,18 @@
 :root {
-  --background: #e0e0e0;
-  --foreground: #ffd700;
-  --textColour: #e0e0e0;
+  /* Color constants */
+  --background: #0d0d0d;
+  --primary-accent: #00ff96;
+  --secondary-accent: #ff41a1;
+  --text-color: #e0e0e0;
+  --highlights: #ffd700;
+
+  /* Legacy variables for compatibility */
+  --foreground: var(--highlights);
+  --textColour: var(--text-color);
+
+  /* Transparent variants for shadows */
+  --primary-accent-50: rgba(0, 255, 150, 0.5);
+  --highlights-50: rgba(255, 215, 0, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {

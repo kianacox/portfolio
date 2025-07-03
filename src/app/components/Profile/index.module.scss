@@ -1,10 +1,10 @@
 .profilePicture {
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+  box-shadow: 0 0 10px var(--primary-accent-50);
 }
 
 .name {
-  color: #e0e0e0;
+  color: var(--text-color);
   font-size: 70px;
   font-family: var(--font-vt323);
 }
@@ -13,7 +13,7 @@
 .about,
 .strengths,
 .weaknesses {
-  color: #00ff96;
+  color: var(--primary-accent);
   font-size: 20px;
   padding: 10px 0 10px 0;
 }
@@ -28,15 +28,15 @@
 .summary,
 .strengthsText,
 .weaknessText {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .strengthBold {
-  color: #ffd700;
+  color: var(--highlights);
 }
 
 .weaknessBold {
-  color: #ff41a1;
+  color: var(--secondary-accent);
 }
 
 .strengthsItem,

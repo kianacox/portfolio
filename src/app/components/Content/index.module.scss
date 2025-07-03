@@ -14,10 +14,10 @@
   overflow-x: hidden;
   padding: 20px;
   border: 1px solid;
-  border-color: #00ff96;
+  border-color: var(--primary-accent);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
-  background: #0d0d0d;
+  box-shadow: 0 0 10px var(--primary-accent-50);
+  background: var(--background);
   flex-direction: row;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -27,15 +27,15 @@
 }
 
 .tabs {
-  background-color: #0d0d0d;
-  border: 1px solid #00ff96;
-  color: #e0e0e0;
+  background-color: var(--background);
+  border: 1px solid var(--primary-accent);
+  color: var(--text-color);
   padding: 10px;
   border-radius: 4px;
   margin: 0 2px 0 0;
   border-bottom: 0px;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+  box-shadow: 0 0 10px var(--primary-accent-50);
   font-family: var(--font-vt323);
   font-size: 30px;
 }
