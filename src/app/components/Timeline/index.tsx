@@ -21,6 +21,7 @@ import { SiTestinglibrary } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 import { FaFigma } from 'react-icons/fa';
 import { COLORS } from '../../../constants/colors';
+import { motion, Variants } from 'motion/react';
 
 const EmploymentTmeline: React.FC = () => {
   const iconSize = 32;
@@ -75,165 +76,195 @@ const EmploymentTmeline: React.FC = () => {
     date: '2024 - Present',
   };
 
+  const containerVariants: Variants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring' as const,
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
+
   return (
-    <Timeline>
-      {/* {Flutter} */}
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{
-            marginLeft: '10px',
-            marginTop: '10px',
-            padding: '10px',
-          }}
-        >
-          <div className={styles.skillsContainer}>
-            <h3 className={styles.presentTitle}>{flutterContent.date}</h3>
-            <h4>Skills</h4>
-            <ul className={styles.skillsListItems}>
-              {skillsFlutter.map((skill) => (
-                <div key={skill.name} className={styles.skillsListItem}>
-                  {skill.icon}
-                  <p>{skill.name}</p>
-                </div>
-              ))}
-            </ul>
-          </div>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot
-            sx={{
-              border: `1px solid ${COLORS['primary-accent']}`,
-              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
-              backgroundColor: COLORS.text,
-            }}
-          />
-          <TimelineConnector
-            sx={{
-              border: `1px solid ${COLORS['primary-accent']}`,
-              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
-            }}
-          />
-        </TimelineSeparator>
-        <TimelineContent
-          sx={{
-            border: `1px solid ${COLORS.highlights}`,
-            boxShadow: `0 0 10px ${COLORS.highlights}80`,
-            borderRadius: '8px',
-            marginLeft: '10px',
-            marginTop: '10px',
-            padding: '10px',
-          }}
-        >
-          <h3>{flutterContent.title}</h3>
-          <strong>{flutterContent.company}</strong>
-          <p>{flutterContent.description}</p>
-        </TimelineContent>
-      </TimelineItem>
-      {/* {SBG} */}
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{
-            marginLeft: '10px',
-            marginTop: '10px',
-            padding: '10px',
-          }}
-        >
-          <div className={styles.skillsContainer}>
-            <h3>{sbgContent.date}</h3>
-            <h4>Skills</h4>
-            <ul className={styles.skillsListItems}>
-              {skillsSBG.map((skill) => (
-                <div key={skill.name} className={styles.skillsListItem}>
-                  {skill.icon}
-                  <p>{skill.name}</p>
-                </div>
-              ))}
-            </ul>
-          </div>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot
-            sx={{
-              border: `1px solid ${COLORS['primary-accent']}`,
-              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
-              backgroundColor: COLORS.text,
-            }}
-          />
-          <TimelineConnector
-            sx={{
-              border: `1px solid ${COLORS['primary-accent']}`,
-              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
-            }}
-          />
-        </TimelineSeparator>
-        <TimelineContent
-          sx={{
-            border: `1px solid ${COLORS.highlights}`,
-            boxShadow: `0 0 10px ${COLORS.highlights}80`,
-            borderRadius: '8px',
-            marginLeft: '10px',
-            marginTop: '10px',
-            padding: '10px',
-          }}
-        >
-          <h3>{sbgContent.title}</h3>
-          <strong>{sbgContent.company}</strong>
-          <p>{sbgContent.description}</p>
-        </TimelineContent>
-      </TimelineItem>
-      {/* {Tech Academy} */}
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{
-            marginLeft: '10px',
-            marginTop: '10px',
-            padding: '10px',
-          }}
-        >
-          <div className={styles.skillsContainer}>
-            <h3>{techAcademyContent.date}</h3>
-            <h4>Skills</h4>
-            <ul className={styles.skillsListItems}>
-              {skillsTechGrad.map((skill) => (
-                <div key={skill.name} className={styles.skillsListItem}>
-                  {skill.icon}
-                  <p>{skill.name}</p>
-                </div>
-              ))}
-            </ul>
-          </div>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot
-            sx={{
-              border: `1px solid ${COLORS['primary-accent']}`,
-              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
-              backgroundColor: COLORS.text,
-            }}
-          />
-          <TimelineConnector
-            sx={{
-              border: `1px solid ${COLORS['primary-accent']}`,
-              boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
-            }}
-          />
-        </TimelineSeparator>
-        <TimelineContent
-          sx={{
-            border: `1px solid ${COLORS.highlights}`,
-            boxShadow: `0 0 10px ${COLORS.highlights}80`,
-            borderRadius: '8px',
-            marginLeft: '10px',
-            marginTop: '10px',
-            padding: '10px',
-          }}
-        >
-          <h3>{techAcademyContent.title}</h3>
-          <strong>{techAcademyContent.company}</strong>
-          <p>{techAcademyContent.description}</p>
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
+    <motion.div variants={containerVariants} initial="hidden" animate="show">
+      <Timeline>
+        {/* {Flutter} */}
+        <motion.div variants={itemVariants}>
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{
+                marginLeft: '10px',
+                marginTop: '10px',
+                padding: '10px',
+              }}
+            >
+              <div className={styles.skillsContainer}>
+                <h3 className={styles.presentTitle}>{flutterContent.date}</h3>
+                <h4>Skills</h4>
+                <ul className={styles.skillsListItems}>
+                  {skillsFlutter.map((skill) => (
+                    <div key={skill.name} className={styles.skillsListItem}>
+                      {skill.icon}
+                      <p>{skill.name}</p>
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                  backgroundColor: COLORS.text,
+                }}
+              />
+              <TimelineConnector
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                }}
+              />
+            </TimelineSeparator>
+            <TimelineContent
+              sx={{
+                border: `1px solid ${COLORS.highlights}`,
+                boxShadow: `0 0 10px ${COLORS.highlights}80`,
+                borderRadius: '8px',
+                marginLeft: '10px',
+                marginTop: '10px',
+                padding: '10px',
+              }}
+            >
+              <h3>{flutterContent.title}</h3>
+              <strong>{flutterContent.company}</strong>
+              <p>{flutterContent.description}</p>
+            </TimelineContent>
+          </TimelineItem>
+        </motion.div>
+        {/* {SBG} */}
+        <motion.div variants={itemVariants}>
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{
+                marginLeft: '10px',
+                marginTop: '10px',
+                padding: '10px',
+              }}
+            >
+              <div className={styles.skillsContainer}>
+                <h3>{sbgContent.date}</h3>
+                <h4>Skills</h4>
+                <ul className={styles.skillsListItems}>
+                  {skillsSBG.map((skill) => (
+                    <div key={skill.name} className={styles.skillsListItem}>
+                      {skill.icon}
+                      <p>{skill.name}</p>
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                  backgroundColor: COLORS.text,
+                }}
+              />
+              <TimelineConnector
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                }}
+              />
+            </TimelineSeparator>
+            <TimelineContent
+              sx={{
+                border: `1px solid ${COLORS.highlights}`,
+                boxShadow: `0 0 10px ${COLORS.highlights}80`,
+                borderRadius: '8px',
+                marginLeft: '10px',
+                marginTop: '10px',
+                padding: '10px',
+              }}
+            >
+              <h3>{sbgContent.title}</h3>
+              <strong>{sbgContent.company}</strong>
+              <p>{sbgContent.description}</p>
+            </TimelineContent>
+          </TimelineItem>
+        </motion.div>
+        {/* {Tech Academy} */}
+        <motion.div variants={itemVariants}>
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{
+                marginLeft: '10px',
+                marginTop: '10px',
+                padding: '10px',
+              }}
+            >
+              <div className={styles.skillsContainer}>
+                <h3>{techAcademyContent.date}</h3>
+                <h4>Skills</h4>
+                <ul className={styles.skillsListItems}>
+                  {skillsTechGrad.map((skill) => (
+                    <div key={skill.name} className={styles.skillsListItem}>
+                      {skill.icon}
+                      <p>{skill.name}</p>
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                  backgroundColor: COLORS.text,
+                }}
+              />
+              <TimelineConnector
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                }}
+              />
+            </TimelineSeparator>
+            <TimelineContent
+              sx={{
+                border: `1px solid ${COLORS.highlights}`,
+                boxShadow: `0 0 10px ${COLORS.highlights}80`,
+                borderRadius: '8px',
+                marginLeft: '10px',
+                marginTop: '10px',
+                padding: '10px',
+              }}
+            >
+              <h3>{techAcademyContent.title}</h3>
+              <strong>{techAcademyContent.company}</strong>
+              <p>{techAcademyContent.description}</p>
+            </TimelineContent>
+          </TimelineItem>
+        </motion.div>
+      </Timeline>
+    </motion.div>
   );
 };
 

@@ -11,6 +11,7 @@ import { FaDocker } from 'react-icons/fa';
 import { SiWebpack } from 'react-icons/si';
 import { SiVite } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
+import { motion } from 'motion/react';
 import React from 'react';
 
 import styles from './index.module.scss';
@@ -22,7 +23,13 @@ const InventoryComponent: React.FC = () => {
       <h2 className={styles.inventoryTitle}>Mastery</h2>
       <div className={styles.inventoryRow}>
         <div className={styles.inventoryItem}>
-          <FaHtml5 size={iconSize} />
+          <motion.div
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <FaHtml5 size={iconSize} />
+          </motion.div>
           <p>HTML</p>
         </div>
 
