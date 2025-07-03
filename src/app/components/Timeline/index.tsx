@@ -86,7 +86,7 @@ const EmploymentTmeline: React.FC = () => {
           }}
         >
           <div className={styles.skillsContainer}>
-            <h3>{flutterContent.date}</h3>
+            <h3 className={styles.presentTitle}>{flutterContent.date}</h3>
             <h4>Skills</h4>
             <ul className={styles.skillsListItems}>
               {skillsFlutter.map((skill) => (
@@ -100,8 +100,11 @@ const EmploymentTmeline: React.FC = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot
-            variant="outlined"
-            sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
+            sx={{
+              border: '1px solid #00ff96',
+              boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)',
+              backgroundColor: '#E0E0E0',
+            }}
           />
           <TimelineConnector
             sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
@@ -146,8 +149,11 @@ const EmploymentTmeline: React.FC = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot
-            variant="outlined"
-            sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
+            sx={{
+              border: '1px solid #00ff96',
+              boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)',
+              backgroundColor: '#E0E0E0',
+            }}
           />
           <TimelineConnector
             sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
@@ -192,8 +198,11 @@ const EmploymentTmeline: React.FC = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot
-            variant="outlined"
-            sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}
+            sx={{
+              border: '1px solid #00ff96',
+              boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)',
+              backgroundColor: '#E0E0E0',
+            }}
           />
           <TimelineConnector
             sx={{ border: '1px solid #00ff96', boxShadow: '0 0 10px rgba(0, 255, 150, 0.5)' }}

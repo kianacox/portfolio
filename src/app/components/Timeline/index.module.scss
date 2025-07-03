@@ -25,3 +25,9 @@
   text-align: center;
   font-size: 12px;
 }
+
+@media (max-width: 768px) {
+  .presentTitle {
+    text-align: center;
+  }
+}
