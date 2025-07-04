@@ -101,10 +101,13 @@ const EmploymentTmeline: React.FC = () => {
 
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="show">
-      <Timeline>
+      <Timeline role="list" aria-label="Employment Timeline">
         {/* {Flutter} */}
         <motion.div variants={itemVariants}>
-          <TimelineItem>
+          <TimelineItem
+            role="listitem"
+            aria-label={`${flutterContent.title} at ${flutterContent.company}`}
+          >
             <TimelineOppositeContent
               sx={{
                 marginLeft: '10px',
@@ -114,11 +117,11 @@ const EmploymentTmeline: React.FC = () => {
             >
               <div className={styles.skillsContainer}>
                 <h3 className={styles.presentTitle}>{flutterContent.date}</h3>
-                <h4>Skills</h4>
-                <ul className={styles.skillsListItems}>
+                <h4 id="flutter-skills-heading">Skills</h4>
+                <ul className={styles.skillsListItems} aria-labelledby="flutter-skills-heading">
                   {skillsFlutter.map((skill) => (
-                    <div key={skill.name} className={styles.skillsListItem}>
-                      {skill.icon}
+                    <div key={skill.name} className={styles.skillsListItem} role="listitem">
+                      <span aria-hidden="true">{skill.icon}</span>
                       <p>{skill.name}</p>
                     </div>
                   ))}
@@ -149,16 +152,17 @@ const EmploymentTmeline: React.FC = () => {
                 marginTop: '10px',
                 padding: '10px',
               }}
+              role="article"
             >
-              <h3>{flutterContent.title}</h3>
+              <h3 id="flutter-title">{flutterContent.title}</h3>
               <strong>{flutterContent.company}</strong>
-              <p>{flutterContent.description}</p>
+              <p aria-labelledby="flutter-title">{flutterContent.description}</p>
             </TimelineContent>
           </TimelineItem>
         </motion.div>
         {/* {SBG} */}
         <motion.div variants={itemVariants}>
-          <TimelineItem>
+          <TimelineItem role="listitem" aria-label={`${sbgContent.title} at ${sbgContent.company}`}>
             <TimelineOppositeContent
               sx={{
                 marginLeft: '10px',
@@ -168,11 +172,11 @@ const EmploymentTmeline: React.FC = () => {
             >
               <div className={styles.skillsContainer}>
                 <h3>{sbgContent.date}</h3>
-                <h4>Skills</h4>
-                <ul className={styles.skillsListItems}>
+                <h4 id="sbg-skills-heading">Skills</h4>
+                <ul className={styles.skillsListItems} aria-labelledby="sbg-skills-heading">
                   {skillsSBG.map((skill) => (
-                    <div key={skill.name} className={styles.skillsListItem}>
-                      {skill.icon}
+                    <div key={skill.name} className={styles.skillsListItem} role="listitem">
+                      <span aria-hidden="true">{skill.icon}</span>
                       <p>{skill.name}</p>
                     </div>
                   ))}
@@ -203,16 +207,20 @@ const EmploymentTmeline: React.FC = () => {
                 marginTop: '10px',
                 padding: '10px',
               }}
+              role="article"
             >
-              <h3>{sbgContent.title}</h3>
+              <h3 id="sbg-title">{sbgContent.title}</h3>
               <strong>{sbgContent.company}</strong>
-              <p>{sbgContent.description}</p>
+              <p aria-labelledby="sbg-title">{sbgContent.description}</p>
             </TimelineContent>
           </TimelineItem>
         </motion.div>
         {/* {Tech Academy} */}
         <motion.div variants={itemVariants}>
-          <TimelineItem>
+          <TimelineItem
+            role="listitem"
+            aria-label={`${techAcademyContent.title} at ${techAcademyContent.company}`}
+          >
             <TimelineOppositeContent
               sx={{
                 marginLeft: '10px',
@@ -222,11 +230,14 @@ const EmploymentTmeline: React.FC = () => {
             >
               <div className={styles.skillsContainer}>
                 <h3>{techAcademyContent.date}</h3>
-                <h4>Skills</h4>
-                <ul className={styles.skillsListItems}>
+                <h4 id="tech-academy-skills-heading">Skills</h4>
+                <ul
+                  className={styles.skillsListItems}
+                  aria-labelledby="tech-academy-skills-heading"
+                >
                   {skillsTechGrad.map((skill) => (
-                    <div key={skill.name} className={styles.skillsListItem}>
-                      {skill.icon}
+                    <div key={skill.name} className={styles.skillsListItem} role="listitem">
+                      <span aria-hidden="true">{skill.icon}</span>
                       <p>{skill.name}</p>
                     </div>
                   ))}
@@ -257,10 +268,11 @@ const EmploymentTmeline: React.FC = () => {
                 marginTop: '10px',
                 padding: '10px',
               }}
+              role="article"
             >
-              <h3>{techAcademyContent.title}</h3>
+              <h3 id="tech-academy-title">{techAcademyContent.title}</h3>
               <strong>{techAcademyContent.company}</strong>
-              <p>{techAcademyContent.description}</p>
+              <p aria-labelledby="tech-academy-title">{techAcademyContent.description}</p>
             </TimelineContent>
           </TimelineItem>
         </motion.div>

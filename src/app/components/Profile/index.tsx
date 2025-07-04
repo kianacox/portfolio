@@ -5,31 +5,40 @@ import React from 'react';
 
 const ProfileComponent: React.FC = () => {
   return (
-    <section data-testid="profile">
+    <section data-testid="profile" role="region" aria-label="Profile Information">
       <div className={styles.avatarContainer}>
         <Image
-          alt="a picture of me"
+          alt="A picture of Kiana Cox in anime style"
           src="/avatar1.png"
           className={styles.profilePicture}
           width={150}
           height={200}
-        ></Image>
-        <h1 className={styles.name}>Kiana Cox</h1>
+          priority
+        />
+        <h1 className={styles.name} id="profile-name">
+          Kiana Cox
+        </h1>
       </div>
       <div className={styles.profileCardContent}>
-        <h2 className={styles.titles}>Titles</h2>
+        <h2 className={styles.titles} id="profile-titles">
+          Titles
+        </h2>
         <Headline />
 
-        <h2 className={styles.about}>Summary</h2>
-        <p className={styles.summary}>
+        <h2 className={styles.about} id="profile-summary">
+          Summary
+        </h2>
+        <p className={styles.summary} aria-labelledby="profile-summary">
           Front-End Engineer, Level 4. Specialises in React/Redux builds, critical hits in unit
           testing, and stealth refactors during code freeze. Former Sky Casino alchemist, now
           spec&rsquo;d into cross-brand code wizardry. Buffs entire squad with clean UI components
           and test coverage auras. Weak to flaky tests, resistant to Jira chaos.
         </p>
         <div className={styles.skillsContainer}>
-          <h2 className={styles.strengths}>Strengths</h2>
-          <ul>
+          <h2 className={styles.strengths} id="profile-strengths">
+            Strengths
+          </h2>
+          <ul aria-labelledby="profile-strengths">
             <li className={styles.strengthsItem}>
               <p className={styles.strengthsText}>
                 <strong className={styles.strengthBold}>React Mastery</strong>: +10 to component
@@ -65,8 +74,10 @@ const ProfileComponent: React.FC = () => {
         </div>
 
         <div className={styles.weaknessesContainer}>
-          <h2 className={styles.weaknesses}>Weaknesses</h2>
-          <ul>
+          <h2 className={styles.weaknesses} id="profile-weaknesses">
+            Weaknesses
+          </h2>
+          <ul aria-labelledby="profile-weaknesses">
             <li className={styles.weaknessItem}>
               <p className={styles.weaknessText}>
                 <strong className={styles.weaknessBold}>Delicious Baked Treats</strong>: Morale

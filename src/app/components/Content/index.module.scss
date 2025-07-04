@@ -40,10 +40,17 @@
   font-size: 30px;
 }
 
+.activeTab {
+  border-color: var(--highlights);
+  box-shadow: 0 0 10px var(--highlights-50);
+  color: var(--highlights);
+}
+
 .tabs:hover {
   transform: scale(1.05);
   transition-duration: 0.5s;
 }
+
 .tabsContainer {
   display: flex;
   margin: 12px;

@@ -43,7 +43,13 @@ const Headline: React.FC = () => {
 
   return (
     <div className={styles.headerContainer}>
-      <span className={styles.headline}>{displayed}</span>
+      <span
+        className={styles.headline}
+        aria-live="polite"
+        aria-label={`Current title: ${displayed}`}
+      >
+        {displayed}
+      </span>
     </div>
   );
 };
