@@ -38,7 +38,7 @@ const LandingOverlay: React.FC<LandingOverlayProps> = ({ onStart }) => {
         aria-labelledby="welcome-title"
         aria-describedby="welcome-description"
       >
-        Enter Portfolio
+        Enter
       </button>
       <div id="welcome-description" className="sr-only">
         Press Enter or click the button to enter the portfolio

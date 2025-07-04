@@ -5,15 +5,16 @@ import Profile from '../Profile';
 import { useState, useCallback, useMemo } from 'react';
 import EmploymentTmeline from '../Timeline';
 import { motion } from 'motion/react';
-
+import Projects from '../Projects';
 const Content: React.FC = () => {
-  type TabKey = 'profile' | 'inventory' | 'employment' | 'education';
+  type TabKey = 'profile' | 'employment' | 'projects';
   const [activeTab, setActiveTab] = useState<TabKey>('profile');
 
   const tabArray = useMemo(
     () => [
       { key: 'profile', label: 'Profile' },
       { key: 'employment', label: 'Employment History' },
+      { key: 'projects', label: 'Projects' },
     ],
     []
   );
@@ -42,6 +43,8 @@ const Content: React.FC = () => {
     switch (activeTab) {
       case 'employment':
         return <EmploymentTmeline />;
+      case 'projects':
+        return <Projects />;
       default:
         return <Profile />;
     }
