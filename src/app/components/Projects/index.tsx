@@ -26,13 +26,14 @@ const Projects: React.FC = () => {
 
   const iconSize = 20;
   return (
-    <section role="region" aria-label="Personal Projects">
+    <section data-testid="projects" role="region" aria-label="Personal Projects">
       <h1 id="projects-heading">Personal Projects</h1>
       <div className={styles.projectsSection} aria-labelledby="projects-heading">
         {personalProjects.map((project, index) => (
           <motion.div
             key={project.title}
             className={styles.projectCard}
+            data-testid={`project-${project.title}`}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -57,6 +58,7 @@ const Projects: React.FC = () => {
                 aria-label={`Visit ${project.title} live website`}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-testid="live-website-link"
               >
                 <CgWebsite size={iconSize} aria-hidden="true" />
                 <span className="sr-only">Live Website</span>
@@ -66,6 +68,7 @@ const Projects: React.FC = () => {
                 aria-label={`View ${project.title} source code on GitHub`}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-testid="github-link"
               >
                 <FaGithub size={iconSize} aria-hidden="true" />
                 <span className="sr-only">GitHub Repository</span>

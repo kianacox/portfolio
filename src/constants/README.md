@@ -16,16 +16,12 @@ The color palette is defined in `colors.ts` and includes:
 
 ### In TypeScript/JavaScript Files
 
-```typescript
+````typescript
 import { COLORS, getColorWithOpacity } from '../constants/colors';
 
 // Use colors directly
 const backgroundColor = COLORS.background;
 const primaryColor = COLORS['primary-accent'];
-
-// Use with opacity
-const shadowColor = getColorWithOpacity('primary-accent', 0.5);
-```
 
 ### In CSS/SCSS Files
 
@@ -38,7 +34,7 @@ The colors are available as CSS custom properties:
   border: 1px solid var(--primary-accent);
   box-shadow: 0 0 10px var(--primary-accent-50);
 }
-```
+````
 
 ### Available CSS Variables
 

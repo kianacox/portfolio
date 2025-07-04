@@ -29,7 +29,7 @@ const LandingOverlay: React.FC<LandingOverlayProps> = ({ onStart }) => {
         }}
         aria-hidden="true"
       >
-        <PiSword size={40} className={styles.swordIcon} />
+        <PiSword size={40} className={styles.swordIcon} data-testid="sword-icon" />
       </motion.div>
 
       <button

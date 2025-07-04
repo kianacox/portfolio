@@ -12,8 +12,8 @@ describe('Content', () => {
   it('should render the tabs', () => {
     render(<Content />);
     expect(screen.getByText('Profile')).toBeInTheDocument();
-    expect(screen.getByText('Inventory')).toBeInTheDocument();
     expect(screen.getByText('Employment History')).toBeInTheDocument();
+    expect(screen.getByText('Projects')).toBeInTheDocument();
   });
 
   it('should render profile by default', () => {
@@ -21,11 +21,11 @@ describe('Content', () => {
     expect(screen.getByTestId('profile')).toBeInTheDocument();
   });
 
-  it('should render inventory when inventory tab is clicked', async () => {
+  it('should render projects when projects tab is clicked', async () => {
     const user = userEvent.setup();
     render(<Content />);
-    await user.click(screen.getByText('Inventory'));
-    expect(screen.getByTestId('inventory')).toBeInTheDocument();
+    await user.click(screen.getByText('Projects'));
+    expect(screen.getByTestId('projects')).toBeInTheDocument();
   });
 
   it('should render employment history when employment history tab is clicked', async () => {

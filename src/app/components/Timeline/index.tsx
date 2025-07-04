@@ -101,7 +101,7 @@ const EmploymentTmeline: React.FC = () => {
 
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="show">
-      <Timeline role="list" aria-label="Employment Timeline">
+      <Timeline data-testid="employment" role="list" aria-label="Employment Timeline">
         {/* {Flutter} */}
         <motion.div variants={itemVariants}>
           <TimelineItem
@@ -117,8 +117,14 @@ const EmploymentTmeline: React.FC = () => {
             >
               <div className={styles.skillsContainer}>
                 <h3 className={styles.presentTitle}>{flutterContent.date}</h3>
-                <h4 id="flutter-skills-heading">Skills</h4>
-                <ul className={styles.skillsListItems} aria-labelledby="flutter-skills-heading">
+                <h4 id="flutter-skills-heading" data-testid="flutter-skills-heading">
+                  Skills
+                </h4>
+                <ul
+                  className={styles.skillsListItems}
+                  aria-labelledby="flutter-skills-heading"
+                  data-testid="flutter-skills-list"
+                >
                   {skillsFlutter.map((skill) => (
                     <div key={skill.name} className={styles.skillsListItem} role="listitem">
                       <span aria-hidden="true">{skill.icon}</span>
@@ -172,8 +178,14 @@ const EmploymentTmeline: React.FC = () => {
             >
               <div className={styles.skillsContainer}>
                 <h3>{sbgContent.date}</h3>
-                <h4 id="sbg-skills-heading">Skills</h4>
-                <ul className={styles.skillsListItems} aria-labelledby="sbg-skills-heading">
+                <h4 id="sbg-skills-heading" data-testid="sbg-skills-heading">
+                  Skills
+                </h4>
+                <ul
+                  className={styles.skillsListItems}
+                  aria-labelledby="sbg-skills-heading"
+                  data-testid="sbg-skills-list"
+                >
                   {skillsSBG.map((skill) => (
                     <div key={skill.name} className={styles.skillsListItem} role="listitem">
                       <span aria-hidden="true">{skill.icon}</span>
@@ -230,10 +242,13 @@ const EmploymentTmeline: React.FC = () => {
             >
               <div className={styles.skillsContainer}>
                 <h3>{techAcademyContent.date}</h3>
-                <h4 id="tech-academy-skills-heading">Skills</h4>
+                <h4 id="tech-academy-skills-heading" data-testid="tech-academy-skills-heading">
+                  Skills
+                </h4>
                 <ul
                   className={styles.skillsListItems}
                   aria-labelledby="tech-academy-skills-heading"
+                  data-testid="tech-academy-skills-list"
                 >
                   {skillsTechGrad.map((skill) => (
                     <div key={skill.name} className={styles.skillsListItem} role="listitem">
