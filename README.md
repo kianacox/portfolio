@@ -117,16 +117,21 @@ npm run format
 portfolio/
 ├── public/                 # Static assets
 ├── src/
+│   ├── constants/          # Color system and constants
+│   │   ├── colors.ts       # Color palette definitions
+│   │   └── README.md       # Color system documentation
 │   └── app/
 │       ├── components/     # React components
-│       │   ├── Content/    # Main content wrapper
-│       │   ├── Profile/    # Profile section
-│       │   ├── Inventory/  # Skills and projects
-│       │   ├── Employment/ # Work history
-│       │   └── Headline/   # Header components
-│       ├── layout.tsx      # Root layout
-│       ├── page.tsx        # Home page
-│       └── globals.css     # Global styles
+│       │   ├── Content/    # Main content wrapper with tab navigation
+│       │   ├── Profile/    # Profile section with skills
+│       │   ├── Timeline/   # Employment history timeline
+│       │   ├── Projects/   # Personal projects showcase
+│       │   ├── Headline/   # Animated header components
+│       │   └── LandingOverlay/ # Welcome screen
+│       ├── layout.tsx      # Root layout with fonts
+│       ├── page.tsx        # Home page with routing
+│       ├── globals.css     # Global styles and CSS variables
+│       └── page.module.css # Page-specific styles
 ├── package.json
 └── README.md
 ```
