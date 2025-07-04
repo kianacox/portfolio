@@ -19,8 +19,8 @@ const Projects: React.FC = () => {
       title: 'Portfolio',
       description: 'This website! A simple SPA built with Next.js and custom css.',
       image: '/portfolio.png',
-      link: 'https://www.google.com',
-      github: 'https://www.github.com',
+      link: 'https://kianacox.dev/',
+      github: 'https://github.com/kianacox/portfolio',
     },
   ];
 
