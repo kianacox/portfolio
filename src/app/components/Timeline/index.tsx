@@ -8,7 +8,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 
 import styles from './index.module.scss';
 import { RiNextjsFill } from 'react-icons/ri';
-import { FaGitAlt } from 'react-icons/fa';
+import { FaGitAlt, FaJs } from 'react-icons/fa';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { FaHtml5 } from 'react-icons/fa';
 import { MdCss } from 'react-icons/md';
@@ -47,6 +47,7 @@ const EmploymentTmeline: React.FC = () => {
   const skillsFlutter = [
     { name: 'React', icon: <FaReact size={iconSize} /> },
     { name: 'Redux', icon: <SiRedux size={iconSize} /> },
+    { name: 'JavaScript', icon: <FaJs size={iconSize} /> },
     { name: 'Testing Library', icon: <SiTestinglibrary size={iconSize} /> },
     { name: 'Workflows', icon: <FaGithub size={iconSize} /> },
     { name: 'Design Systems', icon: <FaFigma size={iconSize} /> },

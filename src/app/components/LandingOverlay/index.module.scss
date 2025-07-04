@@ -1,0 +1,38 @@
+.landingOverlay {
+  height: 100vh;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+
+  .enterButton {
+    cursor: pointer;
+    font-family: var(--font-primary);
+    color: var(--primary-accent);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--background);
+    box-shadow: 0 0 10px var(--primary-accent-50);
+    border: 1px solid var(--primary-accent);
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .swordIcon {
+    color: var(--highlights);
+    text-shadow:
+      0 0 6px var(--highlights-50),
+      0 0 12px var(--highlights-50),
+      0 0 18px var(--highlights-50);
+    transition: transform 0.3s ease;
+  }
+}
