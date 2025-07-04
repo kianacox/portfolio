@@ -73,7 +73,7 @@ const EmploymentTmeline: React.FC = () => {
     title: 'Software Engineer',
     company: 'Flutter UK&I',
     description:
-      'Core contributor to a multi-brand migration quest serving 9.8M+ users. Spearheaded a testing strategy overhaul, mentored junior devs, and helped forge a scalable design system by collaborating with designers and taming token chaos. Built themeable UI components now powering Sky, PaddyPower, and Betfair experiences.',
+      'Core contributor to a multi-brand migration quest serving 9.8M+ users. Spearheaded a testing strategy overhaul, mentored junior devs, and helped forge a scalable design system by collaborating with designers. Built themeable UI components now powering Skybet, PaddyPower, and Betfair experiences.',
     date: '2024 - Present',
   };
 

@@ -74,9 +74,6 @@ const ProfileComponent: React.FC = () => {
             </p>
           </li>
         </ul>
-      </div>
-
-      <div className={styles.weaknessesContainer}>
         <h2 className={styles.weaknesses} id="profile-weaknesses" data-testid="profile-weaknesses">
           Weaknesses
         </h2>
