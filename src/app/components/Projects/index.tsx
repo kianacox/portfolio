@@ -5,7 +5,7 @@ import { CgWebsite } from 'react-icons/cg';
 import { FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-const Projects: React.FC = () => {
+const ProjectsComponent: React.FC = () => {
   const personalProjects = [
     {
       title: 'Movie Browser',
@@ -81,4 +81,5 @@ const Projects: React.FC = () => {
   );
 };
 
+const Projects = React.memo(ProjectsComponent);
 export default Projects;

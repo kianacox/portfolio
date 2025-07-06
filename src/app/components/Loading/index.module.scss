@@ -1,0 +1,28 @@
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+  background-color: var(--color-primary-background);
+}
+
+.loadingIcon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// center loading icon on mobile
+@media (max-width: 768px) {
+  .loadingContainer {
+    height: 100vh;
+  }
+}

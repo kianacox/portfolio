@@ -22,8 +22,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FaFigma } from 'react-icons/fa';
 import { COLORS } from '../../../constants/colors';
 import { motion, Variants } from 'motion/react';
+import React from 'react';
 
-const EmploymentTmeline: React.FC = () => {
+const EmploymentTmelineComponent: React.FC = () => {
   const iconSize = 32;
 
   const skillsTechGrad = [
@@ -296,4 +297,5 @@ const EmploymentTmeline: React.FC = () => {
   );
 };
 
+const EmploymentTmeline = React.memo(EmploymentTmelineComponent);
 export default EmploymentTmeline;

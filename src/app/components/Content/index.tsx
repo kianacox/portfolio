@@ -1,11 +1,24 @@
 'use client';
 
 import styles from './index.module.scss';
-import Profile from '../Profile';
 import { useState, useCallback, useMemo } from 'react';
-import EmploymentTmeline from '../Timeline';
 import { motion } from 'motion/react';
-import Projects from '../Projects';
+import dynamic from 'next/dynamic';
+import Loading from '../Loading';
+
+const EmploymentTmeline = dynamic(() => import('../Timeline'), {
+  ssr: false,
+  loading: () => <Loading />,
+});
+const Projects = dynamic(() => import('../Projects'), {
+  ssr: false,
+  loading: () => <Loading />,
+});
+const Profile = dynamic(() => import('../Profile'), {
+  ssr: false,
+  loading: () => <Loading />,
+});
+
 const Content: React.FC = () => {
   type TabKey = 'profile' | 'employment' | 'projects';
   const [activeTab, setActiveTab] = useState<TabKey>('profile');
