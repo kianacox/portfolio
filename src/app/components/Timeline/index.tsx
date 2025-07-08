@@ -177,9 +177,13 @@ const EmploymentTmelineComponent: React.FC = () => {
               }}
               role="article"
             >
-              <h3 id="flutter-title">{flutterContent.title}</h3>
-              <strong>{flutterContent.company}</strong>
-              <p aria-labelledby="flutter-title">{flutterContent.description}</p>
+              <h3 id="flutter-title" className={styles.title}>
+                {flutterContent.title}
+              </h3>
+              <strong className={styles.company}>{flutterContent.company}</strong>
+              <p aria-labelledby="flutter-title" className={styles.description}>
+                {flutterContent.description}
+              </p>
             </TimelineContent>
           </TimelineItem>
         </motion.div>
@@ -240,9 +244,13 @@ const EmploymentTmelineComponent: React.FC = () => {
               }}
               role="article"
             >
-              <h3 id="sbg-title">{sbgContent.title}</h3>
-              <strong>{sbgContent.company}</strong>
-              <p aria-labelledby="sbg-title">{sbgContent.description}</p>
+              <h3 id="sbg-title" className={styles.title}>
+                {sbgContent.title}
+              </h3>
+              <strong className={styles.company}>{sbgContent.company}</strong>
+              <p aria-labelledby="sbg-title" className={styles.description}>
+                {sbgContent.description}
+              </p>
             </TimelineContent>
           </TimelineItem>
         </motion.div>
@@ -306,9 +314,13 @@ const EmploymentTmelineComponent: React.FC = () => {
               }}
               role="article"
             >
-              <h3 id="tech-academy-title">{techAcademyContent.title}</h3>
-              <strong>{techAcademyContent.company}</strong>
-              <p aria-labelledby="tech-academy-title">{techAcademyContent.description}</p>
+              <h3 id="tech-academy-title" className={styles.title}>
+                {techAcademyContent.title}
+              </h3>
+              <strong className={styles.company}>{techAcademyContent.company}</strong>
+              <p aria-labelledby="tech-academy-title" className={styles.description}>
+                {techAcademyContent.description}
+              </p>
             </TimelineContent>
           </TimelineItem>
         </motion.div>

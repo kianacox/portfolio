@@ -27,6 +27,11 @@
 }
 
 @media (max-width: 768px) {
+  .description,
+  .title,
+  .company {
+    font-size: 18px;
+  }
   .presentTitle {
     text-align: center;
   }
