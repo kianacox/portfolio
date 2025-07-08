@@ -33,10 +33,11 @@ const ProfileComponent: React.FC = () => {
           aria-labelledby="profile-summary"
           data-testid="profile-summary"
         >
-          Front-End Engineer, Level 4. Specialises in React/Redux builds, critical hits in unit
-          testing, and stealth refactors during code freeze. Former Sky Casino alchemist, now
-          spec&rsquo;d into cross-brand code wizardry. Buffs entire squad with clean UI components
-          and test coverage auras. Weak to flaky tests, resistant to Jira chaos.
+          Front-End leaning software engineer. Specialises in React/Redux builds, critical hits in
+          unit testing, and stealth refactors during code freeze. Former Sky Casino alchemist, now
+          spec&rsquo;d into cross-brand wizardry. Buffs entire squad with clean UI components,
+          performance optimisations and test coverage auras. Weak to flaky tests, resistant to Jira
+          chaos.
         </p>
         <h2 className={styles.strengths} id="profile-strengths" data-testid="profile-strengths">
           Strengths
@@ -99,8 +100,8 @@ const ProfileComponent: React.FC = () => {
           <li className={styles.weaknessItem}>
             <p className={styles.weaknessText}>
               <strong className={styles.weaknessBold}>Game Tunnel Vision</strong>: Finds One Game to
-              Rule Them All™ and disappears into it for weeks. Will emerge with lore knowledge,
-              build guides, and themed desktop backgrounds.
+              Rule Them All™ and fixates on it for weeks (or months... or years). Will emerge with
+              lore knowledge, build guides, and themed desktop backgrounds.
             </p>
           </li>
         </ul>

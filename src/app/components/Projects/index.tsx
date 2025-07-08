@@ -41,13 +41,14 @@ const ProjectsComponent: React.FC = () => {
             aria-labelledby={`project-title-${index}`}
           >
             <h2 id={`project-title-${index}`}>{project.title}</h2>
+
             <Image
               src={project.image}
               alt={`Screenshot of ${project.title} project`}
               width={200}
               height={120}
             />
-            <p>{project.description}</p>
+            <p className={styles.projectDescription}>{project.description}</p>
             <div
               className={styles.projectLinks}
               role="group"
@@ -59,8 +60,10 @@ const ProjectsComponent: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="live-website-link"
+                className={styles.liveWebsiteLink}
               >
                 <CgWebsite size={iconSize} aria-hidden="true" />
+                <span>Live Website</span>
                 <span className="sr-only">Live Website</span>
               </a>
               <a
@@ -69,8 +72,10 @@ const ProjectsComponent: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="github-link"
+                className={styles.githubLink}
               >
                 <FaGithub size={iconSize} aria-hidden="true" />
+                <span>GitHub Repository</span>
                 <span className="sr-only">GitHub Repository</span>
               </a>
             </div>

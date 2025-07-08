@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 
 const options = [
   'Software Engineer',
-  'Level 4 Human Wizard',
   'Hero of Hyrule',
   'Snack Procurement Officer',
   'Grey Warden of Code',
