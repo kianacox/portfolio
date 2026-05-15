@@ -25,4 +25,10 @@ describe('Timeline', () => {
     expect(screen.getByTestId('tech-academy-skills-heading')).toBeInTheDocument();
     expect(screen.getByTestId('tech-academy-skills-list')).toBeInTheDocument();
   });
+
+  test('should render the salecycle timeline item', () => {
+    render(<Timeline />);
+    expect(screen.getByTestId('salecycle-skills-heading')).toBeInTheDocument();
+    expect(screen.getByTestId('salecycle-skills-list')).toBeInTheDocument();
+  });
 });

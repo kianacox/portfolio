@@ -8,6 +8,14 @@ import { motion } from 'framer-motion';
 const ProjectsComponent: React.FC = () => {
   const personalProjects = [
     {
+      title: 'Titch Tattoo',
+      description:
+        'A high-performance Next.js application for a local tattoo artist, optimised for SEO and AI Overviews, deployed on Vercel. Integrated Google Analytics to inform and automate a high-conversion Google Ads bidding strategy.',
+      image: '/titch-tattoo.png',
+      link: 'https://www.titchtattoo.com/',
+      github: '',
+    },
+    {
       title: 'Movie Browser',
       description:
         'A movie browser created using React, Redux and Vite, that allows users to search for movies, view their details, and add them to a favourites list.',
@@ -66,18 +74,20 @@ const ProjectsComponent: React.FC = () => {
                 <span>Live Website</span>
                 <span className="sr-only">Live Website</span>
               </a>
-              <a
-                href={project.github}
-                aria-label={`View ${project.title} source code on GitHub`}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="github-link"
-                className={styles.githubLink}
-              >
-                <FaGithub size={iconSize} aria-hidden="true" />
-                <span>GitHub Repository</span>
-                <span className="sr-only">GitHub Repository</span>
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  aria-label={`View ${project.title} source code on GitHub`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="github-link"
+                  className={styles.githubLink}
+                >
+                  <FaGithub size={iconSize} aria-hidden="true" />
+                  <span>GitHub Repository</span>
+                  <span className="sr-only">GitHub Repository</span>
+                </a>
+              )}
             </div>
           </motion.div>
         ))}

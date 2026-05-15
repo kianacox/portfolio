@@ -12,6 +12,13 @@ describe('Projects', () => {
     render(<Projects />);
     expect(screen.getByTestId('project-Movie Browser')).toBeInTheDocument();
     expect(screen.getByTestId('project-Portfolio')).toBeInTheDocument();
+    expect(screen.getByTestId('project-Titch Tattoo')).toBeInTheDocument();
+  });
+
+  test('should not render github link for projects without a public repo', () => {
+    render(<Projects />);
+    const githubLinks = screen.queryAllByTestId('github-link');
+    expect(githubLinks).toHaveLength(2);
   });
 
   test('should render links to the projects', () => {

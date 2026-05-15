@@ -33,11 +33,11 @@ const ProfileComponent: React.FC = () => {
           aria-labelledby="profile-summary"
           data-testid="profile-summary"
         >
-          Front-End leaning software engineer. Specialises in React/Redux builds, critical hits in
-          unit testing, and stealth refactors during code freeze. Former Sky Casino alchemist, now
-          spec&rsquo;d into cross-brand wizardry. Buffs entire squad with clean UI components,
-          performance optimisations and test coverage auras. Weak to flaky tests, resistant to Jira
-          chaos.
+          Frontend engineer. Specialises in TypeScript, React, Redux and Next.js builds, and landing
+          critical hits at every layer of the testing pyramid. Former Sky Casino alchemist,
+          respec&rsquo;d into cross-brand wizardry, then changed classes into marketing tech. Buffs
+          entire squad with clean UI components, performance optimisations and test coverage auras.
+          Weak to flaky tests, resistant to Jira chaos.
         </p>
         <h2 className={styles.strengths} id="profile-strengths" data-testid="profile-strengths">
           Strengths

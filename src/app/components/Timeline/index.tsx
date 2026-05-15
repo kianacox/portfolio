@@ -20,6 +20,10 @@ import { SiRedux } from 'react-icons/si';
 import { SiTestinglibrary } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 import { FaFigma } from 'react-icons/fa';
+import { SiVite } from 'react-icons/si';
+import { SiCypress } from 'react-icons/si';
+import { SiYarn } from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 import { COLORS } from '../../../constants/colors';
 import { motion, Variants } from 'motion/react';
 import { isMobile } from 'react-device-detect';
@@ -47,6 +51,15 @@ const EmploymentTmelineComponent: React.FC = () => {
     { name: 'Docker', icon: <FaDocker size={iconSize} /> },
   ];
 
+  const skillsSaleCycle = [
+    { name: 'React', icon: <FaReact size={iconSize} /> },
+    { name: 'TypeScript', icon: <BiLogoTypescript size={iconSize} /> },
+    { name: 'Vite', icon: <SiVite size={iconSize} /> },
+    { name: 'Cypress', icon: <SiCypress size={iconSize} /> },
+    { name: 'AWS', icon: <FaAws size={iconSize} /> },
+    { name: 'Yarn', icon: <SiYarn size={iconSize} /> },
+  ];
+
   const skillsFlutter = [
     { name: 'React', icon: <FaReact size={iconSize} /> },
     { name: 'Redux', icon: <SiRedux size={iconSize} /> },
@@ -72,12 +85,20 @@ const EmploymentTmelineComponent: React.FC = () => {
     date: '2023 - 2024',
   };
 
+  const saleCycleContent = {
+    title: 'Senior Frontend Engineer',
+    company: 'SaleCycle',
+    description:
+      'Architected a monorepo migration using Yarn Workspaces and led a Webpack-to-Vite build tooling overhaul, halving dev startup times. Refactored a broken Cypress E2E suite that had been bypassed in CI — achieving a 78% reduction in pipeline duration and restoring it as a genuine quality gate. Engineered a greenfield RCS template editor end-to-end — from stakeholder requirement gathering through wireframes to a production-ready tool with full Cypress coverage. Implemented AWS RUM for real user monitoring and mentor junior and mid-level engineers through PR reviews and workshops on testing and state management.',
+    date: 'Sep 2025 - Present',
+  };
+
   const flutterContent = {
     title: 'Software Engineer',
     company: 'Flutter UK&I',
     description:
       'Core contributor to a multi-brand migration quest serving 9.8M+ users. Spearheaded a testing strategy overhaul, mentored junior devs, and helped forge a scalable design system through close collaboration with designers. Built themeable UI components now powering Skybet, PaddyPower, and Betfair experiences, allowing for code to be reused across brands saving time and effort.',
-    date: '2024 - Present',
+    date: '2024 - Sep 2025',
   };
 
   const containerVariants: Variants = {
@@ -117,6 +138,76 @@ const EmploymentTmelineComponent: React.FC = () => {
           }),
         }}
       >
+        {/* {SaleCycle} */}
+        <motion.div variants={itemVariants}>
+          <TimelineItem
+            role="listitem"
+            aria-label={`${saleCycleContent.title} at ${saleCycleContent.company}`}
+          >
+            {!isMobile && (
+              <TimelineOppositeContent
+                sx={{
+                  marginLeft: '10px',
+                  marginTop: '10px',
+                  padding: '10px',
+                }}
+              >
+                <div className={styles.skillsContainer}>
+                  <h3 className={styles.presentTitle}>{saleCycleContent.date}</h3>
+                  <h4 id="salecycle-skills-heading" data-testid="salecycle-skills-heading">
+                    Skills
+                  </h4>
+                  <ul
+                    className={styles.skillsListItems}
+                    aria-labelledby="salecycle-skills-heading"
+                    data-testid="salecycle-skills-list"
+                  >
+                    {skillsSaleCycle.map((skill) => (
+                      <div key={skill.name} className={styles.skillsListItem} role="listitem">
+                        <span aria-hidden="true">{skill.icon}</span>
+                        <p>{skill.name}</p>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              </TimelineOppositeContent>
+            )}
+            <TimelineSeparator>
+              <TimelineDot
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                  backgroundColor: COLORS.text,
+                }}
+              />
+              <TimelineConnector
+                sx={{
+                  border: `1px solid ${COLORS['primary-accent']}`,
+                  boxShadow: `0 0 10px ${COLORS['primary-accent']}80`,
+                }}
+              />
+            </TimelineSeparator>
+            <TimelineContent
+              sx={{
+                border: `1px solid ${COLORS.highlights}`,
+                boxShadow: `0 0 10px ${COLORS.highlights}80`,
+                borderRadius: '8px',
+                marginLeft: '10px',
+                marginTop: '10px',
+                padding: '10px',
+              }}
+              role="article"
+            >
+              <h3 id="salecycle-title" className={styles.title}>
+                {saleCycleContent.title}
+              </h3>
+              <strong className={styles.company}>{saleCycleContent.company}</strong>
+              <p aria-labelledby="salecycle-title" className={styles.description}>
+                {saleCycleContent.description}
+              </p>
+            </TimelineContent>
+          </TimelineItem>
+        </motion.div>
         {/* {Flutter} */}
         <motion.div variants={itemVariants}>
           <TimelineItem
@@ -132,7 +223,7 @@ const EmploymentTmelineComponent: React.FC = () => {
                 }}
               >
                 <div className={styles.skillsContainer}>
-                  <h3 className={styles.presentTitle}>{flutterContent.date}</h3>
+                  <h3>{flutterContent.date}</h3>
                   <h4 id="flutter-skills-heading" data-testid="flutter-skills-heading">
                     Skills
                   </h4>
