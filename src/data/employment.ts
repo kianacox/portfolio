@@ -1,6 +1,16 @@
 import { IconType } from 'react-icons';
 import { RiNextjsFill } from 'react-icons/ri';
-import { FaGitAlt, FaJs, FaHtml5, FaReact, FaJenkins, FaDocker, FaGithub, FaFigma, FaAws } from 'react-icons/fa';
+import {
+  FaGitAlt,
+  FaJs,
+  FaHtml5,
+  FaReact,
+  FaJenkins,
+  FaDocker,
+  FaGithub,
+  FaFigma,
+  FaAws,
+} from 'react-icons/fa';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { MdCss } from 'react-icons/md';
 import { SiJest, SiRedux, SiTestinglibrary, SiVite, SiCypress, SiYarn } from 'react-icons/si';

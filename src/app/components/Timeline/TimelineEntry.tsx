@@ -34,10 +34,7 @@ type Props = {
 const TimelineEntry: React.FC<Props> = ({ entry }) => {
   return (
     <motion.div variants={itemVariants}>
-      <TimelineItem
-        role="listitem"
-        aria-label={`${entry.title} at ${entry.company}`}
-      >
+      <TimelineItem role="listitem" aria-label={`${entry.title} at ${entry.company}`}>
         {!isMobile && (
           <TimelineOppositeContent
             sx={{
@@ -50,10 +47,7 @@ const TimelineEntry: React.FC<Props> = ({ entry }) => {
               <h3 className={entry.date.includes('Present') ? styles.presentTitle : undefined}>
                 {entry.date}
               </h3>
-              <h4
-                id={`${entry.id}-skills-heading`}
-                data-testid={`${entry.id}-skills-heading`}
-              >
+              <h4 id={`${entry.id}-skills-heading`} data-testid={`${entry.id}-skills-heading`}>
                 Skills
               </h4>
               <ul

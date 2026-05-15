@@ -37,9 +37,7 @@ describe('employmentHistory', () => {
   });
 
   test('exactly one entry is the Present Role', () => {
-    const presentRoles = employmentHistory.filter((entry) =>
-      entry.date.includes('Present')
-    );
+    const presentRoles = employmentHistory.filter((entry) => entry.date.includes('Present'));
     expect(presentRoles).toHaveLength(1);
   });
 

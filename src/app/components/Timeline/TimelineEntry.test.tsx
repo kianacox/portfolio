@@ -50,9 +50,7 @@ describe('TimelineEntry', () => {
 
   test('aria-label uses entry title and company', () => {
     render(<TimelineEntry entry={fixture} />);
-    expect(
-      screen.getByRole('listitem', { name: 'Test Engineer at Test Co' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('listitem', { name: 'Test Engineer at Test Co' })).toBeInTheDocument();
   });
 
   test('skills panel is visible on desktop', () => {
@@ -74,4 +72,3 @@ describe('TimelineEntry — Present Role', () => {
     expect(dateEl).toHaveClass('presentTitle');
   });
 });
-
