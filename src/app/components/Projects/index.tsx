@@ -4,40 +4,15 @@ import Image from 'next/image';
 import { CgWebsite } from 'react-icons/cg';
 import { FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { projects } from '../../../data/projects';
 
 const ProjectsComponent: React.FC = () => {
-  const personalProjects = [
-    {
-      title: 'Titch Tattoo',
-      description:
-        'A high-performance Next.js application for a local tattoo artist, optimised for SEO and AI Overviews, deployed on Vercel. Integrated Google Analytics to inform and automate a high-conversion Google Ads bidding strategy.',
-      image: '/titch-tattoo.png',
-      link: 'https://www.titchtattoo.com/',
-      github: '',
-    },
-    {
-      title: 'Movie Browser',
-      description:
-        'A movie browser created using React, Redux and Vite, that allows users to search for movies, view their details, and add them to a favourites list.',
-      image: '/movie-browser.png',
-      link: 'https://movie-browser-fawn.vercel.app/',
-      github: 'https://github.com/kianacox/movie-browser',
-    },
-    {
-      title: 'Portfolio',
-      description: 'This website! A simple SPA built with Next.js and custom css.',
-      image: '/portfolio.png',
-      link: 'https://kianacox.dev/',
-      github: 'https://github.com/kianacox/portfolio',
-    },
-  ];
-
   const iconSize = 20;
   return (
     <section data-testid="projects" role="region" aria-label="Personal Projects">
       <h1 id="projects-heading">Personal Projects</h1>
       <div className={styles.projectsSection} aria-labelledby="projects-heading">
-        {personalProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <motion.div
             key={project.title}
             className={styles.projectCard}
