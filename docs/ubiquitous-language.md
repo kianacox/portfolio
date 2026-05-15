@@ -43,27 +43,27 @@ Canonical terms for this codebase, grouped by domain. Use these terms consistent
 
 ## Domain: Projects
 
-| Canonical Term | Interchangeable Terms | Meaning | Example Usage |
-|---|---|---|---|
-| **Project Entry** | project, card data | A single project object with title, description, image, link, and github fields | `{ title: 'Titch Tattoo', ... }` |
-| **Project Card** | card, tile | The rendered UI card for a Project Entry | `<motion.div data-testid="project-Titch Tattoo">` |
-| **Live Website Link** | live link, site link | Anchor pointing to the deployed project URL; always rendered | `data-testid="live-website-link"` |
-| **GitHub Link** | repo link, source link | Anchor pointing to the source repository; conditionally rendered only when `github` is non-empty | `data-testid="github-link"` |
-| **Private Repo** | private project, no repo | Project Entry where `github` is an empty string — GitHub Link is hidden from the UI | Titch Tattoo entry |
-| **Project Description** | description, blurb | 1–2 sentence prose summary of the project's purpose and technical highlights | `project.description` |
-| **Project Image** | screenshot, thumbnail | A static image from `/public` displayed on the Project Card | `/titch-tattoo.png` |
+| Canonical Term          | Interchangeable Terms    | Meaning                                                                                          | Example Usage                                     |
+| ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
+| **Project Entry**       | project, card data       | A single project object with title, description, image, link, and github fields                  | `{ title: 'Titch Tattoo', ... }`                  |
+| **Project Card**        | card, tile               | The rendered UI card for a Project Entry                                                         | `<motion.div data-testid="project-Titch Tattoo">` |
+| **Live Website Link**   | live link, site link     | Anchor pointing to the deployed project URL; always rendered                                     | `data-testid="live-website-link"`                 |
+| **GitHub Link**         | repo link, source link   | Anchor pointing to the source repository; conditionally rendered only when `github` is non-empty | `data-testid="github-link"`                       |
+| **Private Repo**        | private project, no repo | Project Entry where `github` is an empty string — GitHub Link is hidden from the UI              | Titch Tattoo entry                                |
+| **Project Description** | description, blurb       | 1–2 sentence prose summary of the project's purpose and technical highlights                     | `project.description`                             |
+| **Project Image**       | screenshot, thumbnail    | A static image from `/public` displayed on the Project Card                                      | `/titch-tattoo.png`                               |
 
 ---
 
 ## Domain: Profile
 
-| Canonical Term | Interchangeable Terms | Meaning | Example Usage |
-|---|---|---|---|
-| **Profile Summary** | bio, summary, about | The gamified prose paragraph describing the engineer's skills, history, and traits | `data-testid="profile-summary"` |
-| **Gamified Language** | RPG language, flavour text | RPG/game-themed vocabulary used throughout the Profile Summary to give it personality | "critical hits", "respec'd", "changed classes", "alchemist" |
-| **Class Change** | career change, role change | RPG term for moving between employers or domains; preferred over "career transition" in copy | "changed classes into marketing tech" |
-| **Buff** | strength, positive trait | RPG term for a positive contribution the engineer provides to the team | "Buffs entire squad with clean UI components" |
-| **Weakness** | weak to, negative trait | RPG term for a known pain point or disliked working condition | "Weak to flaky tests" |
+| Canonical Term        | Interchangeable Terms      | Meaning                                                                                      | Example Usage                                               |
+| --------------------- | -------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Profile Summary**   | bio, summary, about        | The gamified prose paragraph describing the engineer's skills, history, and traits           | `data-testid="profile-summary"`                             |
+| **Gamified Language** | RPG language, flavour text | RPG/game-themed vocabulary used throughout the Profile Summary to give it personality        | "critical hits", "respec'd", "changed classes", "alchemist" |
+| **Class Change**      | career change, role change | RPG term for moving between employers or domains; preferred over "career transition" in copy | "changed classes into marketing tech"                       |
+| **Buff**              | strength, positive trait   | RPG term for a positive contribution the engineer provides to the team                       | "Buffs entire squad with clean UI components"               |
+| **Weakness**          | weak to, negative trait    | RPG term for a known pain point or disliked working condition                                | "Weak to flaky tests"                                       |
 
 ---
 
